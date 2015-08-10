@@ -70,30 +70,33 @@ aside.social_media_links {
 }
 
 #home_nav_main{
-  background-color: rgba(0,0,0,0.7);
   position: absolute;
   z-index: 2;
   margin-top: 380px;
+}
+
+.main_nav_bar{
+  background-color: rgba(0,0,0,0.5);
   width: 100%;
   overflow: auto;
 }
 
-#home_nav_main figure{
+.main_nav_bar figure{
 float: left;
 }
 
-#home_nav_main nav{
+.main_nav_bar nav{
 float: right;
 }
 
-#home_nav_main a:link, a:visited{
+.main_nav_bar a:link, a:visited{
   color: white;
   text-decoration: none;
   opacity: 0.9;
 }
 
-#home_nav_main a:hover{
-  background-color: orange;
+.main_nav_bar a:hover{
+  color: orange;
 }
 
 #My_Name img{
@@ -101,7 +104,7 @@ float: right;
   width: 200px;
 }
 
-#home_nav_main>nav table{
+.main_nav_bar>nav table{
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -111,16 +114,16 @@ float: right;
   font-family: verdana;
 }
 
-#home_nav_main>nav td{
+.main_nav_bar>nav td{
   width: 100px;
   text-align: center;
 }
 
 #About_Me{
-  background-image:url("http://mshibl.github.io/imgs/dark_embroidery.png");
+  background-image:url("http://mshibl.github.io/imgs/dark_Tire.png");
   position: absolute;
   margin-top: 380px;
-  height: 570px;
+  height: 620px;
   width: 100%;
 }
 
@@ -184,3 +187,116 @@ figure figcaption:nth-child(3){
   position: relative;
   top: 80px;
   }
+
+#blog_index_page_nav_bar{
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 2;
+}
+
+#blog_index_page{
+    background-image: url("http://mshibl.github.io/imgs/dark_Tire.png");
+    font-family: verdana;
+}
+
+#blog_index_page header{
+  position: relative;
+  top: 60px;
+}
+
+#blog_index_page header h1{
+  text-transform: uppercase;
+  color: white;
+  font-family: verdana;
+  text-align: center;
+  opacity: 0.9;
+  border-right: solid 4px orange;
+  border-left: solid 4px orange;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+}
+
+#blog_index_page header h5{
+  color: gray;
+  font-family: verdana;
+  text-align: center;
+  opacity: 0.9;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+}
+
+#blog_index_page header a:link, #blog_index_page header a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
+#blog_index_page header a:hover{
+  color: orange;
+}
+
+
+#blog_index_page_content{
+  display: block;
+  height: 700px;
+  border-bottom: solid 3px orange;
+}
+
+#blog_index_page article{
+  background-color: white;
+  opacity: 0.9;
+  width: 900px;
+  float: right;
+  position: relative;
+  top: 60px;
+  right: 30px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+#side_bar{
+  font-size: 15px;
+  background-color: white;
+  opacity: 0.9;
+  position: relative;
+  top: 60px;
+  width: 400px;
+  float: left;
+  left: 20px;
+  margin: 20px;
+}
+
+.blog_post_thumbs{
+  margin: 0;
+}
+
+.blog_post_thumbs img{
+  height: 150px;
+  float: left;
+  padding: 15px;
+  position: relative;
+}
+
+.Blog_Post_Title{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.Blog_Post_Date{
+  font-size: 10px;
+  float: right;
+  border: solid 1px orange;
+  padding: 15px;
+  margin-right: 10px;
+  top:0;
+  position: relative;
+  color: orange;
+}
+
+.Blog_Post_Description{
+  font-size: 13px;
+}
