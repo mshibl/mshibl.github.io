@@ -2,10 +2,17 @@ body.home_page{
   background: url("http://mshibl.github.io/imgs/IMG_4682.jpg") no-repeat;
   background-size: cover;
   background-position: 0px  -100px;
+  width: 100%;
+  background-attachment: fixed;
 }
 
 .hide{
   display: none;
+}
+
+body{
+  width: 100%;
+  margin: 0;
 }
 
 #logo img{
@@ -66,7 +73,7 @@ aside.social_media_links {
   background-color: rgba(0,0,0,0.7);
   position: absolute;
   z-index: 2;
-  margin-top: 250px;
+  margin-top: 380px;
   width: 100%;
   overflow: auto;
 }
@@ -77,6 +84,16 @@ float: left;
 
 #home_nav_main nav{
 float: right;
+}
+
+#home_nav_main a:link, a:visited{
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+#home_nav_main a:hover{
+  background-color: orange;
 }
 
 #My_Name img{
@@ -100,7 +117,70 @@ float: right;
 }
 
 #About_Me{
-  background-color: yellow;
+  background-image:url("http://mshibl.github.io/imgs/dark_embroidery.png");
   position: absolute;
-  margin-top: 250px;
+  margin-top: 380px;
+  height: 570px;
+  width: 100%;
 }
+
+#About_Me h1{
+  position: relative;
+  top: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+  text-align: center;
+  font-size: 30px;
+  font-family: verdana;
+  color: white;
+  opacity: 0.9;
+  border-right: solid 4px orange;
+  border-left: solid 4px orange;
+}
+
+#My_Photo img{
+  position: relative;
+  display: block;
+  top: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+}
+
+#My_Photo figcaption{
+  position: relative;
+  display: block;
+  top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+  text-align: center;
+  font-family: verdana;
+}
+
+figure figcaption:nth-child(2){
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+figure figcaption:nth-child(3){
+  color: orange;
+  font-size: 16px;
+}
+
+#About_Me p{
+  position: relative;
+  top: 80px;
+  font-family: verdana;
+  text-align: center;
+  color: white;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+#About_Me aside{
+  position: relative;
+  top: 80px;
+  }
