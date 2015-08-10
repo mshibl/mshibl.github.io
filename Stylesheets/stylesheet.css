@@ -1,7 +1,8 @@
-html{
-  background-color: red;
+body.home_page{
+  background: url("http://mshibl.github.io/imgs/IMG_4682.jpg") no-repeat;
+  background-size: cover;
 }
 
-header.home_page{
-  background: url("http://mshibl.github.io/imgs/IMG_4682.jpg")
+.hide{
+  display: none;
 }
