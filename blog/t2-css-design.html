@@ -6,16 +6,16 @@
 </head>
 
 <main>
-  <h1>CSS positioning in # simple examples</h1>
+  <h1>CSS positioning in 4 simple examples</h1>
   <h4>August 10, 2015</h4>
 
   <section>
     <p>
-    A webpage is very similar to a normal building. This is an analogy that helped me understand the basics of web design. A building has an inner structure (lobby, rooms, hallways etc.), in the case of a webpage the inner structure is the <b>HTML</b>, the rooms are the different elements that makeup an HTML document (header, body, footer etc.). Once a building structure is in place, the decoration then takes place (wall paint, curtains, floorings etc.), in the case of a webpage the decoration is done using <b>CSS</b>, using CSS you can add the background colors, you can choose the type & size of the font , you can position different elements and much more!
+    A web-page is very similar to a normal building. This is an analogy that helped me understand the basics of web design. A building has an inner structure (lobby, rooms, hallways etc.), in the case of a web-page the inner structure is the <b>HTML</b>, the rooms are the different elements that makeup an HTML document (header, body, footer etc.). Once a building structure is in place, the decoration then takes place (wall paint, curtains, floorings etc.), in the case of a web-page the decoration is done using <b>CSS</b>, using CSS you can add the background colors, you can choose the type & size of the font , you can position different elements and much more!
     </p>
 
     <p>
-    Learning CSS is easy, the syntax is easy to grasp and the tools to learn is readily available to anyone. However, one of the CSS concepts that many beginners find confusing is <b>Positioning</b>. Personally, it took me a long time to quite understand how to appropriately position different elements within a webpage using the <b><a href="http://www.w3schools.com/cssref/pr_class_position.asp">Position Property</a></b>, the reason is that you can easily get tricked that everything in your page is positioned correctly, until something goes wrong (for example an image is not where it is supposed to be), then you start tracing back through your code, making changes on the go, eventually things get messy!
+    Learning CSS is easy, the syntax is easy to grasp and the tools to learn is readily available to anyone. However, one of the CSS concepts that many beginners find confusing is <b>Positioning</b>. Personally, it took me a long time to quite understand how to appropriately position different elements within a web-page using the <b><a href="http://www.w3schools.com/cssref/pr_class_position.asp">Position Property</a></b>, the reason is that you can easily get tricked that everything in your page is positioned correctly, until something goes wrong (for example an image is not where it is supposed to be), then you start tracing back through your code, making changes on the go, eventually things get messy!
     </p>
 
     <img src="http://i.imgur.com/Q3cUg29.gif" alt"Courtsey of mhoye - image from imgur">
@@ -41,7 +41,60 @@
 
     <h1> Examples are work in progress </h1>
   </section>
+  <section id="examples">
+    <article id="example_1">
+      <img src="http://mshibl.github.io/imgs/example_1.png" alt="example_1"/>
+      The simple code above represents an HTML document containing 4 boxes, an outer container, a gray box container and 2 inner boxes.<br>
+      As you can see, none of the 3 inner boxes have the position property set. This means that they're all set to <b>static</b> (default) positioning. This is why you see them positioned in the exact same order they were placed in the HTML code, in other words they are all set in the normal flow of the document.
+    <article>
+
+    <article id="example_2">
+      <img src="http://mshibl.github.io/imgs/example_2.png" alt="example_2"/>
+      In this second example, you can see that the position of the 2 most inner boxes was changed to <b>absolute</b>. Also, you can see that the <b>right</b> property was also set to zero for both.
+      Here we're faced with 3 questions:
+      <ol>
+        <li>why are both the boxes on top of each of other?
+          <br><I>By setting both of their positions to absolute, both boxes are repositioned in relation to the browser window, they no longer abide to the normal flow of the document. Thus, they fall over one another.<I>
+        </li>
+        <li>Why did both boxes move all the way to the right of the screen?
+          <br><I>When we set the right property of an element, we're essentially setting the distance between the right edge of that element and its containing element (in this case the outer white box).</I>
+        </li>
+        <li>But why, are they positioned in relation to the outer white box and not their container (the gray box)?
+          <br><I>The reason is that the position of the gray container box is static. If you want to see what happens if we change the position value of the gray container box, check the next example!</I>
+        </li>
+      </ol>
+    </article>
+
+    <article id="example_3">
+      <img src="http://mshibl.github.io/imgs/example_3.png" alt="example_3"/>
+      In this third example, the gray container has the position set to relative.
+      <br>Now you can see that both the inner boxes are positioned at the upper right corner of th gray container. The reason is that since the gray container now has a position value other than static, it can serve as the container for all inner elements.
+    </article>
+
+    <article id="example_4">
+      <img src="http://mshibl.github.io/imgs/example_4.png" alt="example_4"/>
+      In this fourth example you see that the position of both the inner boxes is set to relative. And we can also see that the green box is given a left value of 5em. Now this raises a few questions:
+      <ol>
+        <li>Why did both boxes move back into the gray container box?
+        <br><I>Because of their (relative) position. In this case the element is positioned relative to its normal position in the document.</I>
+        </li>
+        <li>Why is the Yellow box not positioned to the right of the gray container even though it has a right value of 0?
+        <br><I>Since the yellow box has a relative position, it was shifted 0 units to the right of its initial (normal) position. Since the value is 0, it didn't move at all!</I>
+        </li>
+        <li>Why is the green box shifted from the left?
+        <br><I>Again, since the green box has a relative position, and a left value of 5em, it was pushed to the left 5 units away from its initial (normal) position</I>
+        </li>
+      </ol>
+    </article>
+
+    <p>If you think you haven't gotten the grasp of these examples, I strongly suggest that you replicate the code above and start playing around with it a little bit, try changing the position value for the boxes, and see what happens. I also suggest taking a look at <a href="http://www.w3schools.com/cssref/playit.asp?filename=playcss_position&preval=initial">this example</a> that is setup by W3Schools.
+  </section>
+
+  <p>Here are a few final notes:
+  <ul>
+    <li>Fixed position is same as absolute position, except that it sticks to its position on the screen, even if you scroll up or down.</li>
+    <li>If you have both left and right properties set, the left property will override and the right property won't work. The same happens with bottom and top (top has priority)</li>
+    <li>If the element is absolutely positioned, it will stretch its width to contain all the content within it. Unlike the relative position, which will always to stretch to 100% of the space that it can fill.</li>
+  <ul>
+  </p>
 </main>
-
-
-
