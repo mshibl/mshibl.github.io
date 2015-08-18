@@ -8,7 +8,7 @@ html, body{
   padding: 0;
 }
 
-.home_page header{
+#home_page header{
   background: url("http://mshibl.github.io/imgs/IMG_4682.jpg") no-repeat;
   background-size: cover;
   background-position: 0px  -100px;
@@ -32,7 +32,7 @@ html, body{
   display: block;
 }
 
-.home_page header nav{
+#home_page header nav{
   position: relative;
   margin: 0 auto;
   width: 500px;
@@ -42,7 +42,7 @@ html, body{
   border-bottom: solid 1px orange;
 }
 
-.home_page nav table{
+#home_page nav table{
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -52,22 +52,22 @@ html, body{
   font-family: verdana;
 }
 
-.home_page header nav td{
+#home_page header nav td{
   width: 100px;
   text-align: center;
 }
 
-.home_page header nav a:link, a:visited{
+#home_page header nav a:link, a:visited{
   color: white;
   text-decoration: none;
   opacity: 0.9;
 }
 
-.home_page header nav a:hover{
+#home_page header nav a:hover{
   color: orange;
 }
 
-.home_page .social_media_links{
+#home_page header .social_media_links{
   position: relative;
   margin: 0 auto;
   width: 10%;
@@ -80,14 +80,11 @@ html, body{
 }
 
 .main_nav_bar{
-  z-index: 1;
-  position: absolute;
-}
-
-.main_nav_bar{
+  position: fixed;
+  top: 0;
   background-color: rgba(0,0,0,0.8);
+  z-index: 2;
   width: 100%;
-  overflow: auto;
 }
 
 .main_nav_bar figure{
@@ -108,7 +105,7 @@ float: right;
   color: orange;
 }
 
-#My_Name img{
+.main_nav_bar #My_Name img{
   display: block;
   width: 200px;
 }
@@ -128,83 +125,33 @@ float: right;
   text-align: center;
 }
 
-.home_page #About_Me{
-  position: absolute;
-  top: 40em;
-}
 
-#About_Me{
-  background-image:url("http://mshibl.github.io/imgs/dark_Tire.png");
-  height: 620px;
-  width: 100%;
-}
-
-#About_Me h1{
-  position: relative;
-  top: 70px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 200px;
-  text-align: center;
-  font-size: 30px;
-  font-family: verdana;
-  color: white;
-  opacity: 0.9;
-  border-right: solid 4px orange;
-  border-left: solid 4px orange;
-}
-
-#My_Photo img{
+#About_Me #My_Photo img{
   position: relative;
   display: block;
-  top: 70px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   width: 200px;
 }
 
-#My_Photo figcaption{
+#About_Me  #My_Photo figcaption{
   position: relative;
   display: block;
-  top: 80px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   width: 200px;
   text-align: center;
   font-family: verdana;
 }
 
-figure figcaption:nth-child(2){
+#About_Me  figure figcaption:nth-child(2){
   color: white;
   font-size: 18px;
   font-weight: bold;
+  padding-top: 1em;
 }
 
-figure figcaption:nth-child(3){
+#About_Me  figure figcaption:nth-child(3){
   color: orange;
   font-size: 16px;
-}
-
-#About_Me p{
-  position: relative;
-  top: 80px;
-  font-family: verdana;
-  text-align: center;
-  color: white;
-  padding-right: 100px;
-  padding-left: 100px;
-}
-
-#About_Me aside{
-  position: relative;
-  top: 80px;
-  }
-
-#blog_index_page_nav_bar{
-  position: fixed;
-  top: 0;
-  background-color: black;
-  z-index: 2;
 }
 
 #blog_index_page{
@@ -277,10 +224,11 @@ figure figcaption:nth-child(3){
   opacity: 0.9;
   position: relative;
   top: 60px;
-  width: 400px;
+  width: 350px;
   float: left;
   left: 20px;
   margin: 20px;
+  padding: 1em;
 }
 
 .blog_post_thumbs{
@@ -296,7 +244,7 @@ figure figcaption:nth-child(3){
 
 .Blog_Post_Title{
   position: relative;
-  padding: 0;
+  padding-top: 1em;
   margin: 0;
   font-size: 18px;
 }
@@ -306,7 +254,8 @@ figure figcaption:nth-child(3){
   float: right;
   border: solid 1px orange;
   padding: 15px;
-  margin-right: 10px;
+  margin-right: 1.5em;
+  margin-top: 1.5em;
   top:0;
   position: relative;
   color: orange;
@@ -314,4 +263,52 @@ figure figcaption:nth-child(3){
 
 .Blog_Post_Description{
   font-size: 13px;
+  color: grey;
+}
+
+
+#About_Me{
+  background-image:url("http://mshibl.github.io/imgs/dark_Tire.png");
+  height: 620px;
+  width: 100%;
+  position: relative;
+}
+
+#About_Me h1{
+  position: relative;
+  margin: 0 auto;
+  margin-top: 1em;
+  width: 200px;
+  text-align: center;
+  font-size: 30px;
+  font-family: verdana;
+  color: white;
+  opacity: 0.9;
+  border-right: solid 4px orange;
+  border-left: solid 4px orange;
+}
+
+#About_Me p{
+  position: relative;
+  font-family: verdana;
+  text-align: center;
+  color: white;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+#About_Me table{
+    position: relative;
+    margin: 0 auto;
+  }
+
+#blog_index_page #About_Me{
+  position: relative;
+  bottom: 0em;
+}
+
+#home_page #About_Me #home_main_nav_bar{
+  position: relative;
+  display: block;
+  overflow: auto;
 }
