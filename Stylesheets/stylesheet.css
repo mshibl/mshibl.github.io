@@ -154,17 +154,17 @@ float: right;
   font-size: 16px;
 }
 
-#blog_index_page{
+#blog{
     background-image: url("http://mshibl.github.io/imgs/dark_Tire.png");
     font-family: verdana;
 }
 
-#blog_index_page header{
+#blog header{
   position: relative;
   top: 60px;
 }
 
-#blog_index_page header h1{
+#blog header h1{
   text-transform: uppercase;
   color: white;
   font-family: verdana;
@@ -172,42 +172,40 @@ float: right;
   opacity: 0.9;
   border-right: solid 4px orange;
   border-left: solid 4px orange;
-  margin-right: auto;
-  margin-left: auto;
-  width: 200px;
+  padding-right: 1em;
+  padding-left: 1em;
+  margin: 1em auto;
+  width: 15%
 }
 
-#blog_index_page header h5{
+#blog header h5{
   color: gray;
   font-family: verdana;
   text-align: center;
   opacity: 0.9;
-  margin-right: auto;
-  margin-left: auto;
-  width: 200px;
+  margin: 0 auto;
 }
 
-#blog_index_page header a:link, #blog_index_page header a:visited{
+#blog header a:link, #blog header a:visited{
   text-decoration: none;
   color: inherit;
 }
 
-#blog_index_page header a:hover{
+#blog header a:hover{
   color: orange;
 }
 
 
 #blog_index_page_content{
   display: block;
-  height: 700px;
+overflow: auto;
   border-bottom: solid 3px orange;
   padding-bottom: 5em;
 }
 
-#blog_index_page article{
+#blog article{
   background-color: white;
   border-radius: 1em;
-  opacity: 0.9;
   width: 900px;
   float: right;
   position: relative;
@@ -253,12 +251,15 @@ float: right;
   font-size: 10px;
   float: right;
   border: solid 1px orange;
-  padding: 15px;
   margin-right: 1.5em;
   margin-top: 1.5em;
+  margin-bottom: ;
   top:0;
+  width: 6em;
+  height: 6em;
   position: relative;
   color: orange;
+  text-align: center;
 }
 
 .Blog_Post_Description{
@@ -302,7 +303,7 @@ float: right;
     margin: 0 auto;
   }
 
-#blog_index_page #About_Me{
+#blog #About_Me{
   position: relative;
   bottom: 0em;
 }
@@ -311,4 +312,51 @@ float: right;
   position: relative;
   display: block;
   overflow: auto;
+}
+
+#blog #blog_post_article{
+  background-color: white;
+  border-radius: 1em;
+  width: 900px;
+  float: right;
+  position: relative;
+  top: 60px;
+  right: 30px;
+  margin: 20px;
+  overflow: hidden;
+  padding: 1em;
+  font-size: 14px;
+  font-family: verdana;
+}
+
+#blog_post_article a{
+  color: blue;
+}
+
+#blog_post_article img:first-child{
+  width: 100%;
+}
+
+#blog_post_article img{
+  margin: 0 auto;
+  display: block;
+}
+
+#blog_post_article .Blog_Post_Date{
+  float: left;
+  margin: 0em;
+  margin-right: 2em;
+}
+
+#blog_article_header{
+  margin: 1em;
+  overflow: auto;
+}
+
+#blog_article_header h3, p{
+  margin: 0.5em;
+}
+
+.orange{
+  color: orange;
 }
